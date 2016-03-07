@@ -2,15 +2,24 @@ package pokerBase;
 
 import java.util.Comparator;
 
+import javax.xml.bind.annotation.XmlElement;
+
 import pokerEnums.eRank;
 import pokerEnums.eSuit;
 
 public class Card implements Comparable {
 
+	@XmlElement
 	private eSuit eSuit;
+	@XmlElement
 	private eRank eRank;
+	@XmlElement
 	private int iCardNbr;
 	
+	private Card()
+	{
+		
+	}
 	public Card(pokerEnums.eSuit eSuit, pokerEnums.eRank eRank, int iCardNbr) {
 		super();
 		this.eSuit = eSuit;
