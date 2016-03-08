@@ -59,7 +59,7 @@ public class DeckTest {
 	 */
 	@Test
 	public void DeckDrawIsCard() throws DeckException {
-		Deck d = new Deck("test");
+		Deck d = new Deck();
 		Object o = d.Draw();
 
 		if (!(o instanceof Card)) {
@@ -76,7 +76,7 @@ public class DeckTest {
 
 	@Test(expected = DeckException.class)
 	public void DeckOverDraw() throws Exception {
-		Deck d = new Deck("test");
+		Deck d = new Deck();
 		Card c = null;
 		for (int i = 0; i < 100; i++) {
 			c = d.Draw();		
